@@ -30,6 +30,11 @@
 	<br>
 	<input type="submit" id="submit" value="Submit">
 </form>
-<script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./script.js">
+	it('Checking submit button', () => {
+    cy.get('#submit').should('have.attr', 'value', 'Submit');
+    cy.get('#submit').should('have.attr', 'type', 'submit');
+});
+</script>
 </body>
 </html>
